@@ -1,0 +1,385 @@
+@import './assets/colors/index.scss';
+
+.App {
+    display: flex;
+    min-height: 100vh;
+    background: $grey-light;
+
+    &__content {
+        margin: 25px auto;
+        padding: 15px 0 16px;
+        max-width: 1135px;
+        width: 1135px;
+        border-radius: 15px;
+        background: $white;
+    }
+}
+
+.header {
+    padding: 0 29px 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(196, 196, 196, 0.01);
+
+    &__btns {
+        display: flex;
+        align-items: center;
+        width: 80%;
+    }
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 44px;
+    color: $black;
+}
+
+.btn {
+
+    &-user {
+
+        &-add {
+            margin-left: 10px;
+            width: 218px;
+            height: 36px;
+            max-width: 218px;
+            font-family: 'Futura PT Medium';
+            font-size: 18px;
+            text-align: center;
+            color: $white;
+            border-radius: 10px;
+            background: $green; 
+        }
+        
+    }
+
+    &-modal {
+        padding: 21px 0 20px;
+        width: 404px;
+        max-width: 404px;
+        height: 61px;
+        font-family: 'Futura PT Medium';
+        font-size: 20px;
+        line-height: 20px;
+        text-align: center;
+        color: $white;
+        border-radius: 15px;
+        background:  $green; 
+    }
+
+    &-close {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 26px;
+        right: 20px;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background: $white;
+    box-shadow: -30px 30px 50px 0px rgba(28, 28, 30, 0.10);
+    z-index: 10;
+}
+
+.field {
+    font-family: 'Futura PT Book';
+    line-height: 20px;
+    color: $grey-medium;
+    border-radius: 10px;
+    border: 1px solid $grey;
+    background: $white;
+}
+
+.sidebar {
+    padding: 25px 20px;
+    text-align: center;
+    background: $white;
+    border-radius: 0px 15px 0px 0px;
+
+    &__logo {
+
+    }
+
+    &__avatar {
+        margin: 26px 0;
+        width: 60px;
+        height: 60px;
+
+        img {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 60px;
+        }
+    }
+
+    &__menu {
+
+    }
+
+    &__item {
+        margin-bottom: 34px;
+        cursor: pointer;
+
+        &-name {
+            display: none;
+        }
+    }
+}
+
+.user {
+    padding: 18px 29px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    &__card {
+        
+        display: flex;
+        align-items: center;
+    }
+
+    &__image {
+        width: 64px;
+        height: 64px;
+        box-sizing: border-box;
+        
+        img {
+            width: 64px;
+            height: 64px;
+            border-radius: 64px;
+            object-fit: cover;
+        }
+    }
+
+    &__info {
+        margin-left: 11px;
+
+        &-text {
+            display: flex;
+            align-items: center;
+            margin-bottom: 9px;
+            font-size: 18px;
+        }
+
+        &-name {
+            margin-right: 11px;
+            font-weight: 600;
+            line-height: 20px;
+            color: $black;
+        }
+
+        &-verification {
+            margin-right: 7px;
+            font-family: 'Futura PT Medium';
+            color: $grey-medium;
+        }
+
+        &-email {
+            font-family: 'Futura PT Book';
+            color: $grey-medium;
+        }
+
+        &-permissions {
+           display: flex;
+           align-items: center;
+        }
+    }
+
+    &__search {
+        position: relative;
+        width: 72%;
+        height: 38px;
+
+        &-input {
+            padding: 8px 10px 8px 13px;
+            width: 100%;
+            font-size: 18px;
+        }
+
+        &-btn {
+            position: absolute;
+            top: 10px;
+            right: 16px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__edit {
+        padding: 22px 30px 10px 26px;
+        width: 238px;
+        height: 143px;
+        
+
+        &-btn {
+            margin-bottom: 17px;
+            max-width: 182px;
+            font-family: 'Futura PT Book';
+            font-size: 18px;
+            text-align: left;
+            color: $black;
+        }
+
+        &-permissions {
+            padding: 20px 18px 12px 20px;
+            width: 222px;
+            height: 249px;
+        }
+    }
+}
+
+.user:hover {
+    background-color:  #EFEFF6;
+}
+
+.permission {
+    margin-right: 5px;
+    padding: 5px 10px;
+    max-width: 178px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Futura PT Book';
+    font-size: 16px;
+    color: $grey-medium;
+    border-radius: 10px;
+    border: 1px solid $grey;
+    box-sizing: border-box;
+
+    &__edit {
+        margin-bottom: 11px;
+        height: 20px;
+        font-family: 'Futura PT Book';
+        font-size: 16px;
+        color: $black;
+
+        & label {
+            display: flex;
+            align-items: center;
+            height: 20px;
+            // padding-left: 25px;
+            position: relative;
+        }
+
+        // & label:before {
+        //     content: '';
+        //     position: absolute;
+        //     left: 0;
+        //     top: 0;
+        //     width: 16px;
+        //     height: 16px;
+        //     border-radius: 5px;
+        //     border: 1px solid $grey;
+        //     box-sizing: border-box;
+        //     cursor: pointer;
+        // }
+
+        input {
+            margin-right: 9px;
+            width: 16px;
+            height: 16px;
+            border-radius: 5px;
+            border: 1px solid $grey;
+        }
+
+        // & input[type="checkbox"] {
+        //     display: none
+        // }
+
+        // & input[type="checkbox"]:checked + label:before {
+        //     background-color: #5856D6;
+        //     // background: url('./assets/img/icon-checkbox.svg');
+        // }
+
+        // & input[type="checkbox"]:checked + label::before::after {
+        //     content: '\2713';
+        //     color: $white;
+        //     font-size: 14px;
+        //     position: absolute;
+        //     top: 0;
+        //     left: 4px;
+        // }
+    }
+}
+
+.add-user {
+    padding: 59px 61px;
+    width: 526px;
+    max-width: 526px;
+    min-height: 378px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 25px;
+    background: $white;
+    box-shadow: -30px 30px 50px 0px rgba(28, 28, 30, 0.10);
+
+
+    &__form {
+
+        &-field {
+            margin-bottom: 8px;
+            padding: 20px;
+            width: 100%;
+            height: 61px;
+            font-size: 20px;
+        }
+
+        &-select {
+            margin-bottom: 8px;
+            font-family: "Futura PT Book";
+            line-height: 20px;
+            color: #9494A0;
+            font-size: 20px;
+        }
+    }
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0 43px;
+    width: 526px;
+    max-width: 526px;
+    height: 189px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 25px;
+    background: $white;
+    box-shadow: -30px 30px 50px 0px rgba(28, 28, 30, 0.10);
+
+    &-text {
+        margin-bottom: 17px;
+        max-width: 404px;
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 120%;
+        color: $black;
+    }
+}
+
+@media screen and (max-width: 1350px){
+    .App {
+
+        &__content {
+            width: 65%;
+        }
+    }
+}
