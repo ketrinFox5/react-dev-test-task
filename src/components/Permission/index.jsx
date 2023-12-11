@@ -1,6 +1,7 @@
 const Permission = ({permission}) => {
+    const isAdmin = permission === "Администратор";
     return(
-        <div className="permission">
+        <div className={`permission ${isAdmin ? 'permission-admin' : ''}`}>
             {permission}
         </div>
     )
