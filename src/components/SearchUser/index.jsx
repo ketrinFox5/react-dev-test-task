@@ -10,7 +10,6 @@ const SearchUser = ({resultsSearch}) => {
     }
 
     const searchUser = () => {
-        console.log(searchValue)
         if (searchValue === '') {
             return updateUsers([]);
         } 

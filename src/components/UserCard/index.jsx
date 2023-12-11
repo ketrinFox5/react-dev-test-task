@@ -29,9 +29,7 @@ const UserCard = ({user, deleteUser, updateUser}) => {
         setIsOpenEditPermissions(false);
     }
     const checkedPermissions = (permissions) => {
-        console.log(permissions)
         const updateUserInfo = {...userInfo, permissions: permissions}
-        console.log(updateUserInfo)
         setUserInfo(updateUserInfo);
         updateUser(updateUserInfo);
     }

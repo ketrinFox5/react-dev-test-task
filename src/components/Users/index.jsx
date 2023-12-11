@@ -10,7 +10,7 @@ const Users = ({users, deleteUser, updateUser}) => {
     const updateUserInfo = (user) => {
         updateUser(user);
     }
-    console.log(users)
+
     return(
         <div>
             { users.map((user) => (

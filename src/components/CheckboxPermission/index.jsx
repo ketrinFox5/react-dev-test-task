@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react';
 const CheckboxPermission = ({item, checkboxChange, userPermissions, isAllCheckbox}) => {
     const [isChecked, setIsChecked] = useState(false);
     const handleCheckboxChange = (e) => {
-        console.log(e)
         const checkboxData = {value: item.value, checked: e.target.checked}
         checkboxChange(checkboxData);
         setIsChecked(e.target.checked);

@@ -54,7 +54,6 @@ function App() {
 
   const addNewUser = (newUser) => {
     setMessage(`Приглашение отправлено на почту ${newUser.email}`) ;
-    console.log(message)
     const updateUsers = [newUser, ...users];
     setUsers(updateUsers);
     localStorage.setItem('usersData', JSON.stringify(updateUsers));
